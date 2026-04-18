@@ -7,7 +7,7 @@
 A polished full-stack MERN application that helps developers create, manage, and share a public portfolio of projects through a clean dashboard and a public profile page.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-01696F?style=for-the-badge&logo=vercel&logoColor=white)](https://devboard-client.vercel.app/)
-[![Backend API](https://img.shields.io/badge/API-Node.js-1F2937?style=for-the-badge&logo=render&logoColor=white)](https://devboard-server.onrender.com/)
+[![Backend API](https://img.shields.io/badge/API-Node.js-1F2937?style=for-the-badge&logo=node.js&logoColor=white)](https://devboard-server.onrender.com/)
 [![React](https://img.shields.io/badge/Frontend-React_18-0F172A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Express](https://img.shields.io/badge/Backend-Express-111827?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/Database-MongoDB-166534?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
@@ -45,21 +45,6 @@ This project demonstrates practical full-stack engineering with authentication, 
 - **Public Portfolio Page:** Share a public developer profile using a username-based route.
 - **Project Insights:** View profile-level stats such as total projects, GitHub-linked projects, and live demo counts.
 - **Responsive Design:** Optimized layouts for mobile, tablet, and desktop screens.
-
----
-
-## Product Preview
-
-> Replace the image paths below only if your screenshot folder changes.
-
-### Authentication Screens
-![Authentication UI](./screenshots/auth.png)
-
-### Project Dashboard
-![Dashboard UI](./screenshots/dashboard.png)
-
-### Public Profile
-![Public Profile UI](./screenshots/profile.png)
 
 ---
 
