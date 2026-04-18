@@ -216,19 +216,7 @@ For production deployment, make sure the frontend URL is whitelisted in the back
 
 ---
 
-## Highlights for Submission
 
-If you are presenting this project in an academic, internship, or portfolio review setting, this project demonstrates:
-
-- Full-stack MERN development
-- Authentication and authorization
-- REST API design
-- Protected route handling
-- Cloud deployment workflow
-- Responsive UI implementation
-- Real-world portfolio product thinking
-
----
 
 ## Author
 
