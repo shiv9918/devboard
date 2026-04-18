@@ -1,72 +1,116 @@
-# DevBoard — Developer Portfolio Tracker
+# DevBoard
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://devboard-client.vercel.app)
-[![API](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render)](https://devboard-server.onrender.com)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org)
-[![Node.js](https://img.shields.io/badge/Node.js-18-339933?style=for-the-badge&logo=node.js)](https://nodejs.org)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb)](https://cloud.mongodb.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+<div align="center">
 
----
+### Developer Portfolio Tracker for Modern Builders
 
-## What is DevBoard?
+A polished full-stack MERN application that helps developers create, manage, and share a public portfolio of projects through a clean dashboard and a public profile page.
 
-**DevBoard** is a full-stack MERN application that lets developers build and share a public portfolio of their projects. Users can sign up, add projects with tech stacks and links, and share a public profile URL with anyone — no login required to view a profile.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-01696F?style=for-the-badge&logo=vercel&logoColor=white)](https://devboard-client.vercel.app/)
+[![Backend API](https://img.shields.io/badge/API-Node.js-1F2937?style=for-the-badge&logo=render&logoColor=white)](https://devboard-server.onrender.com/)
+[![React](https://img.shields.io/badge/Frontend-React_18-0F172A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Express](https://img.shields.io/badge/Backend-Express-111827?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB-166534?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-7C3AED?style=for-the-badge)](./LICENSE)
 
----
-
-## Screenshots
-
-> Dashboard — manage your projects
-
-![Dashboard](./screenshots/dashboard.png)
-
-> Public Profile — shareable with anyone
-
-![Profile](./screenshots/profile.png)
-
-> Login / Signup
-
-![Auth](./screenshots/auth.png)
+</div>
 
 ---
 
-## Features
+## Overview
 
-- 🔐 **JWT Authentication** — secure signup, login, and logout
-- 🗂️ **Project Dashboard** — add, edit, and delete projects
-- 🏷️ **Tech Stack Badges** — visual tags per project
-- 🔗 **GitHub & Live Demo links** per project card
-- 🌐 **Public Profile** — shareable at `/u/:username` (no login needed)
-- 📊 **Profile Stats** — total projects, GitHub repos, live projects
-- 📱 **Responsive** — mobile + desktop layouts
-- ☁️ **Fully Deployed** — Vercel (frontend) + Render (backend) + MongoDB Atlas
+**DevBoard** is a full-stack portfolio management platform built for developers who want a simple way to showcase their work online. Users can create an account, manage projects from a private dashboard, attach tech stacks and external links, and publish a shareable public profile that anyone can view.
+
+This project demonstrates practical full-stack engineering with authentication, protected CRUD operations, REST APIs, responsive UI design, and cloud deployment using modern MERN tooling.
+
+---
+
+## Why This Project Stands Out
+
+- Clean full-stack architecture with separate **client** and **server** applications.
+- Secure **JWT-based authentication** with protected routes.
+- Public profile system for showcasing developer projects without requiring visitor login.
+- Responsive and modern UI built for both desktop and mobile users.
+- Production deployment using **Vercel**, **Render**, and **MongoDB Atlas**.
+- Strong project structure suitable for portfolio submission and recruiter review.
+
+---
+
+## Core Features
+
+- **Authentication:** Sign up, log in, stay authenticated, and access protected dashboard routes.
+- **Project Management:** Create, update, and delete portfolio projects from a personalized dashboard.
+- **Tech Stack Tags:** Add project technologies as visual badges for better readability.
+- **External Links:** Attach GitHub repositories and live demo links to each project.
+- **Public Portfolio Page:** Share a public developer profile using a username-based route.
+- **Project Insights:** View profile-level stats such as total projects, GitHub-linked projects, and live demo counts.
+- **Responsive Design:** Optimized layouts for mobile, tablet, and desktop screens.
+
+---
+
+## Product Preview
+
+> Replace the image paths below only if your screenshot folder changes.
+
+### Authentication Screens
+![Authentication UI](./screenshots/auth.png)
+
+### Project Dashboard
+![Dashboard UI](./screenshots/dashboard.png)
+
+### Public Profile
+![Public Profile UI](./screenshots/profile.png)
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | React 18, Vite, Tailwind CSS |
+| Layer | Technologies |
+|---|---|
+| Frontend | React 18, Vite, Tailwind CSS, React Router DOM |
 | Backend | Node.js, Express.js |
 | Database | MongoDB Atlas, Mongoose |
-| Auth | JWT (jsonwebtoken), bcryptjs |
-| HTTP Client | Axios |
-| Routing | React Router DOM v6 |
-| Deployment | Vercel (frontend), Render (backend) |
+| Authentication | JWT, bcryptjs |
+| API Communication | Axios |
+| Deployment | Vercel, Render |
 
 ---
 
-## Live Links
+## Architecture
 
-| Service | URL |
-|---------|-----|
-| 🖥️ Frontend | https://devboard-client.vercel.app |
-| ⚙️ Backend API | https://devboard-server.onrender.com |
-| 🩺 Health Check | https://devboard-server.onrender.com/ |
+```text
+devboard/
+├── client/                # React frontend
+│   ├── src/
+│   │   ├── api/           # Axios configuration
+│   │   ├── components/    # Reusable UI components
+│   │   ├── context/       # Global auth state
+│   │   ├── pages/         # App pages
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── .env.example
+│   └── package.json
+│
+├── server/                # Express backend
+│   ├── middleware/        # Auth middleware
+│   ├── models/            # Mongoose schemas
+│   ├── routes/            # API routes
+│   ├── tests/             # API test scripts
+│   ├── .env.example
+│   └── index.js
+│
+└── README.md
+```
 
-> **Note:** The Render free tier sleeps after 15 min of inactivity. First request may take 30–50 seconds (cold start).
+---
+
+## Live Deployment
+
+- **Frontend:** https://devboard-client.vercel.app/
+- **Backend API:** https://devboard-server.onrender.com/
+- **Health Check:** https://devboard-server.onrender.com/
+
+> **Note:** If the backend is hosted on Render free tier, the first request may take a few seconds because the service can cold start after inactivity.
 
 ---
 
@@ -74,54 +118,83 @@
 
 ### Prerequisites
 
-- Node.js 18+
-- MongoDB Atlas account (free tier works)
-- Git
+Make sure you have the following installed:
 
-### Clone & Run
+- Node.js 18 or above
+- Git
+- MongoDB Atlas account or local MongoDB instance
+
+### 1. Clone the repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/shiv9918/devboard.git
 cd devboard
 ```
 
-#### Backend
+### 2. Setup the backend
 
 ```bash
 cd server
 npm install
 cp .env.example .env
-# Edit .env — fill in MONGO_URI and JWT_SECRET
-npm run dev
-# Server runs on http://localhost:5000
 ```
 
-#### Frontend (new terminal)
+Update `server/.env` with your own values:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_secret_key
+CLIENT_URL=http://localhost:5173
+```
+
+Start the backend server:
+
+```bash
+npm run dev
+```
+
+### 3. Setup the frontend
+
+Open a new terminal:
 
 ```bash
 cd client
 npm install
 cp .env.example .env
-# Edit .env — set VITE_API_URL=http://localhost:5000
-npm run dev
-# App runs on http://localhost:5173
 ```
+
+Update `client/.env`:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+### 4. Open the app
+
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:5000`
 
 ---
 
 ## Environment Variables
 
-### `server/.env`
+### Server
 
 ```env
 PORT=5000
-MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.xxxxx.mongodb.net/devboard
-JWT_SECRET=your_long_random_secret_here
-CLIENT_URL=https://your-app.vercel.app
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_secret_key
+CLIENT_URL=http://localhost:5173
 ```
 
-### `client/.env`
+### Client
 
 ```env
 VITE_API_URL=http://localhost:5000
@@ -129,64 +202,46 @@ VITE_API_URL=http://localhost:5000
 
 ---
 
-## API Endpoints
+## API Routes
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| `GET` | `/` | ❌ | Health check |
-| `POST` | `/api/auth/signup` | ❌ | Register new user |
-| `POST` | `/api/auth/login` | ❌ | Login and get JWT |
-| `GET` | `/api/auth/me` | ✅ | Get current user profile |
-| `GET` | `/api/projects` | ✅ | Get logged-in user's projects |
-| `POST` | `/api/projects` | ✅ | Create new project |
-| `PUT` | `/api/projects/:id` | ✅ | Update project (owner only) |
-| `DELETE` | `/api/projects/:id` | ✅ | Delete project (owner only) |
-| `GET` | `/api/projects/user/:username` | ❌ | Public profile data |
-
-> ✅ = requires `Authorization: Bearer <token>` header
+| Method | Endpoint | Access | Description |
+|---|---|---|---|
+| GET | `/` | Public | Health check |
+| POST | `/api/auth/signup` | Public | Register a new user |
+| POST | `/api/auth/login` | Public | Log in and receive JWT |
+| GET | `/api/auth/me` | Private | Get authenticated user details |
+| GET | `/api/projects` | Private | Fetch logged-in user projects |
+| POST | `/api/projects` | Private | Create a new project |
+| PUT | `/api/projects/:id` | Private | Update a project |
+| DELETE | `/api/projects/:id` | Private | Delete a project |
+| GET | `/api/projects/user/:username` | Public | Fetch public profile data |
 
 ---
 
-## Project Structure
+## Deployment Notes
 
-```
-devboard/
-├── server/                     # Express backend
-│   ├── models/
-│   │   ├── User.js             # Mongoose User schema
-│   │   └── Project.js          # Mongoose Project schema
-│   ├── routes/
-│   │   ├── auth.js             # signup / login / me
-│   │   └── projects.js         # CRUD + public profile
-│   ├── middleware/
-│   │   └── authMiddleware.js   # JWT verification
-│   ├── tests/
-│   │   └── api.test.ps1        # 61 PowerShell API tests
-│   ├── .env.example
-│   ├── .gitignore
-│   └── index.js                # App entry point
-│
-└── client/                     # React frontend
-    ├── src/
-    │   ├── api/
-    │   │   └── axios.js        # Configured Axios instance
-    │   ├── context/
-    │   │   └── AuthContext.jsx # Global auth state
-    │   ├── components/
-    │   │   ├── Navbar.jsx
-    │   │   ├── ProjectCard.jsx
-    │   │   └── ProtectedRoute.jsx
-    │   ├── pages/
-    │   │   ├── Login.jsx
-    │   │   ├── Signup.jsx
-    │   │   ├── Dashboard.jsx
-    │   │   └── Profile.jsx
-    │   ├── App.jsx
-    │   └── main.jsx
-    ├── vercel.json             # SPA routing fallback
-    ├── .env.example
-    └── .gitignore
-```
+This project is designed for a standard MERN deployment pipeline:
+
+- **Frontend** deployed on Vercel
+- **Backend** deployed on Render
+- **Database** hosted on MongoDB Atlas
+- Environment variables configured separately for client and server
+
+For production deployment, make sure the frontend URL is whitelisted in the backend CORS configuration and the backend URL is set correctly in the frontend environment file.
+
+---
+
+## Highlights for Submission
+
+If you are presenting this project in an academic, internship, or portfolio review setting, this project demonstrates:
+
+- Full-stack MERN development
+- Authentication and authorization
+- REST API design
+- Protected route handling
+- Cloud deployment workflow
+- Responsive UI implementation
+- Real-world portfolio product thinking
 
 ---
 
@@ -194,16 +249,18 @@ devboard/
 
 **Shivam Mishra**
 
-[![GitHub](https://img.shields.io/badge/GitHub-shiv9918-181717?style=flat&logo=github)](https://github.com/shiv9918)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-shiv9918-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/shiv9918)
-[![LeetCode](https://img.shields.io/badge/LeetCode-Shiv__9918-FFA116?style=flat&logo=leetcode)](https://leetcode.com/u/Shiv_9918/)
+- GitHub: [shiv9918](https://github.com/shiv9918)
+- LinkedIn: [shiv9918](https://linkedin.com/in/shiv9918)
+- LeetCode: [Shiv_9918](https://leetcode.com/u/Shiv_9918/)
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
-*Built with ❤️ using the MERN stack*
+<div align="center">
+Made with focus, consistency, and the MERN stack.
+</div>
